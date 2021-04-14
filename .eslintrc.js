@@ -2,10 +2,10 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   extends: [
     '@nuxtjs',
@@ -13,6 +13,16 @@ module.exports = {
   ],
   plugins: [
   ],
-  // add your custom rules here
-  rules: {}
-}
+  rules: {
+    semi: ['error', 'always'],
+    quotes: ['error', 'single'],
+    'comma-dangle': ['error', {
+      arrays: 'never',
+      objects: 'always',
+      imports: 'never',
+      exports: 'never',
+      functions: 'never',
+    }],
+    'space-before-function-paren': ['error', 'never'],
+  },
+};
