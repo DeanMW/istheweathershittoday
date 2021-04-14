@@ -41,7 +41,7 @@ export default {
 
       axios
         .get(
-          `http://api.weatherapi.com/v1/current.json?key=8265344b4f2c4174834202537201511&q=${latitude},${longitude}&aqi=no`
+          `https://api.weatherapi.com/v1/current.json?key=8265344b4f2c4174834202537201511&q=${latitude},${longitude}&aqi=no`
         )
         .then((response) => {
           this.weatherData = response.data.current;
